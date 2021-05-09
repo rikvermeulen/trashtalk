@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="/js/server/predict.js"></script>
+    <script src="/js/server/train.js"></script>
+    <title>Admin panel Trashtalk</title>
+  </head>
+  <script>
+  </script>
+  <body>
+    <div class="intro">
+      <div class="introImage">
+        <img src="./src/images/index/wastebucket.png" alt="">
+      </div>
+      <div class="introText">
+          <h1>Trash</h1>
+          <h2>Talk</h2>
+          <img  class="imageSound" src="./src/images/index/sound.png" alt="">
+          <p>Admin panel</p>
+      </div>
+    </div>
+    <div class="about">
+      <p>Trashtalk is een machine learning alogirtme die bepaald wat voor soort afval het is. Denk hierbij aan glas, plastic, metaal, papier of karton. Dit systeem zou u moeten helpen om beter uw afval te scheiden!</p>
+    </div>
+    <main role="main" class="container mt-5">
+        <div class="predict">
+            <div class="predictInterface">
+              <h3>Predict your garbage?</h3>
+              <input id="file" accept="image/*;capture=camera" type="file" />
+                <div class="predictImage">
+                  <p>Predict image</p>
+                  <img id="selected-image" src="" class="ml-3" width="250" alt="" />
+                </div>
+              <button onclick="startPredict()" id="predictBtn" class="btn btn-primary float-right">Predict</button>
+              <p class="error" id="error"></p>
+            </div>
+            <div class="predictResult">
+              <p style="font-weight: 600;">Predictions:</p>
+              <div id="predictions"></div>
+              <p style="font-weight: 600;">Probability:</p>
+              <div id="probability"></div>
+              <!-- <p>All Predictions</p>
+              <div id="allPredictions"></div> -->
+            </div>
+         </div>
+         <div class="train">
+          <div class="trainInterface">
+            <h3>Train your model</h3>
+            <input id="files" accept="image/*;capture=camera" type="file"  multiple onchange="checkFiles(this.files)" />
+            <div class="trainImage">
+              <p>Train images</p>
+              <li id="trainlist">
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+                <img id="selected-images" src="" class="ml-3" width="250" alt="" />
+              </li>
+            </div>
+            <p class="error" id="errorTrain"></p>
+            <button onclick="run()" id="traintBtn" class="btn btn-primary float-right">train</button>
+          </div>
+          <div class="row">
+              <img id="selected-image" src="" class="ml-3" width="250" alt="" />
+              
+              <ol id="prediction-list"></ol>
+            </div>
+          </div>
+      </main>
+  </body>
+  <script src="./js/server/index.js"></script>
+</html>

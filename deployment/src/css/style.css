@@ -1,0 +1,96 @@
+body {
+    background-color: rgb(255, 62, 56);
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #fff
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 120px;
+    margin: 0;
+}
+
+h2 {
+    display: inline;
+    font-size: 100px;
+}
+
+.intro { 
+   width: 100%;
+   display: flex;
+   /* align-items: center; */
+  justify-content: center;
+  margin: 50px 0 0 0;
+}
+
+.intro p {
+    width: 400px;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.imageSound {
+    width: 80px;
+    padding-left: 20px;
+}
+
+input::-webkit-file-upload-button, button {
+    background: #ffffff;
+    border: 0;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    font-size: 20px;
+    font-family: "Changa One",sans-serif;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 6px;
+}
+
+
+.about {
+    margin-top: 40px;
+    width: 100%;
+   display: flex;
+   /* align-items: center; */
+  justify-content: center;
+}
+
+.about p {
+    width: 544px;
+    text-align: center;
+}
+
+
+main {
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+   justify-content: center;
+   margin: 50px 0 0 0;
+}
+
+.predict {
+    width: 40%;
+}
+
+.train {
+    width: 40%;
+}
+
+.predictInterface, .trainInterface {
+    display: inline-grid;
+}
+
+.error {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(255, 62, 56);
+}
